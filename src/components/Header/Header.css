@@ -1,0 +1,103 @@
+header {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header_container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+/* ==========
+ME
+========== */
+.me {
+    width: 22rem;
+    height: 25rem;
+    display: block;
+    margin: 0 auto;
+    background: linear-gradient(var(--color-primary), transparent);
+    margin-top: 3rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+.me>img {
+    width: 15rem;
+    height: 20rem;
+    margin: 0 auto;
+    border-radius: 12rem 12rem 0 0;
+    padding-bottom: 3rem;
+}
+
+.scroll_down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+
+/* ===========
+CTA
+=========== */
+
+#cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* ===========
+Socials
+=========== */
+
+.header_socials {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+    justify-content: center;
+}
+
+.header_socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary)
+}
+
+/* =====================
+Media Query (MEDUIUM DEVICES)
+===================== */
+
+@media screen and (max-width:1024px) {
+    header {
+        height: 100%;
+    }
+}
+
+
+/* =====================
+Media Query (small DEVICES)
+===================== */
+
+@media screen and (max-width:600px) {
+    header {
+        height: 100vh;
+    }
+
+    .header_socials,
+    .scroll_down {
+        display: none;
+    }
+}
