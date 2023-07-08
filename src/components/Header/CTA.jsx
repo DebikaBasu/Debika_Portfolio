@@ -1,4 +1,4 @@
-import CV from "../../Assets/Debika Basu Resume.pdf";
+import CV from "../../Assets/Debika Resume.pdf";
 import React from "react";
 
 function CTA() {
