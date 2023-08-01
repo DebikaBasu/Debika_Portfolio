@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import ME from "../../Assets/about_me.png";
+import ME from "../../Assets/Untitled design.png";
 import { FaAward } from "react-icons/fa";
 import { VscFolderLibrary } from "react-icons/vsc";
 function about() {
@@ -32,9 +32,8 @@ function about() {
           <p>
             I am pursuing B.Tech in Computer Science and Engineering from Brainware University,
             and am looking for an entry-level role to kickstart my career in
-            Fullstack Development.<br />
-            <br /> Knowledgeable in HTML, CSS, Javascript, programming, and
-            Data structure.
+            Software Development.<br />
+            <br /> Knowledgeable in Data structure, Java,  programming, HTML, CSS and Javascript.
           </p>
 
           <a href="#contact" className="btn btn-primary">
