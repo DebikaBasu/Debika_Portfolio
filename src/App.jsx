@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from '@vercel/analytics/react';
 import {
   Header,
   Nav,
@@ -28,6 +29,7 @@ const App = () => {
       <Portfolio />
       <Contact />
       <Footer />
+      <Analytics />
     </>
   );
 };
