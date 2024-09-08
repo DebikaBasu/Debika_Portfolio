@@ -102,10 +102,6 @@ function Portfolio() {
             </CardContent>
           </Card>
         </Box>
-
-        
-
-
         <Box
           width="350px"
           sx={{
@@ -187,8 +183,7 @@ function Portfolio() {
             </CardContent>
           </Card>
         </Box>
-
-        <Box width="350px" sx={{ margin: "0 auto" }}>
+        {/* <Box width="350px" sx={{ margin: "0 auto" }}>
           <Card style={boxstyle}>
             <CardContent>
               <img src={VDF} alt="" className="portfolio_img" />
@@ -213,10 +208,7 @@ function Portfolio() {
               </CardActions>
             </CardContent>
           </Card>
-        </Box>
-        
-        
-        
+        </Box> */}
       </div>
     </section>
   );
