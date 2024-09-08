@@ -39,7 +39,7 @@ function Contact() {
     //   message: form,
     // });
 
-    emailjs.sendForm('service_rn5yt28', 'template_r6936ke', form.current, 'wnZky3xaWiCqQOrqk')
+    emailjs.sendForm('service_rn5yt28', 'template_r6936ke', form.current, 'avmTtdxOP07X5W35adxoQ')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
       }, (error) => {
