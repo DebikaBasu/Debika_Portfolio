@@ -34,17 +34,13 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    var templateParams = {
-      name: 'James',
-      notes: 'Check this out!',
-    };
-    
-    emailjs.send('service_rn5yt28', 'template_r6936ke', templateParams).then(
-      (response) => {
-        console.log('SUCCESS!', response.status, response.text);
+    emailjs.sendForm('service_rn5yt28', 'template_r6936ke', form.current, 'Frj_eq4Wx8J0WRkPg')
+    .then(
+      () => {
+        console.log('SUCCESS!');
       },
       (error) => {
-        console.log('FAILED...', error);
+        console.log('FAILED...', error.text);
       },
     );
   };
