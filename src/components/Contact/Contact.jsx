@@ -34,23 +34,35 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    // emailjs.send("service_rn5yt28","template_r6936ke",{
+    //   from_name: "roychowdhuryankan2001@gmail.com",
+    //   message: form,
+    // });
 
-    emailjs
-      .sendForm(
-        "service_fhlulyb",
-        "template_xbw72p2",
-        form.current,
-        "zL2z7B-CKNL9oNlr-"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm('service_rn5yt28', 'template_r6936ke', form.current)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      }, (error) => {
+        console.log('FAILED...', error);
+      },
+    );
+
+    // emailjs
+    //   .sendForm(
+    //     "service_rn5yt28",
+    //     "template_r6936ke",
+    //     form.current,
+    //     "zL2z7B-CKNL9oNlr-"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //       e.target.reset();
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
   };
 
   const textInput = React.useRef(null);
@@ -82,7 +94,7 @@ function Contact() {
                   align="center"
                   style={{ cursor: "pointer" }}
                   onClick={() =>
-                    window.open("mailto:debika.connect@gmail.com@example.org")
+                    window.open("mailto:debika.connect@gmail")
                   }
                   color="primary"
                   mt={1}
