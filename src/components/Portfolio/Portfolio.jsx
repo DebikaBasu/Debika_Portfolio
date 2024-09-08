@@ -2,7 +2,7 @@ import React from "react";
 import "./Portfolio.css";
 import { Box, Card, CardContent, Typography, CardActions } from "@mui/material";
 import Im from "../../Assets/flipkart_clone.png";
- import VDF from "../../Assets/Analog_clock.png";
+//  import VDF from "../../Assets/Analog_clock.png";
 
 import Ct from "../../Assets/freeCodeCamp_clone.png";
 import gpt from "../../Assets/Sorting_visualizer.png";
@@ -115,32 +115,7 @@ function Portfolio() {
           </Card>
         </Box>
 
-        <Box width="350px" sx={{ margin: "0 auto" }}>
-          <Card style={boxstyle}>
-            <CardContent>
-              <img src={VDF} alt="" className="portfolio_img" />
-              <Typography
-                gutterbottom
-                variant="h5"
-                component="div"
-                sx={{ marginTop: "20px" }}
-              >
-                Analog clock using html,css and JavaScript
-              </Typography>
-              <CardActions sx={{ marginTop: "10px" }}>
-                <a
-                  href="https://github.com/DebikaBasu/Analog_clock"
-                  style={{ marginRight: "10px" }}
-                >
-                  Github
-                </a>
-                <a href="https://debikabasu.github.io/Analog_clock/" className="btn btn-primary">
-                  Live Demo
-                </a>
-              </CardActions>
-            </CardContent>
-          </Card>
-        </Box>
+
         
         
         
