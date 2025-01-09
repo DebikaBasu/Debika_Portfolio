@@ -8,7 +8,7 @@ import picofme from '../../public/Up-pic.png';
 
 export const Hero = () => {
   return (
-    <section id="about" className="min-h-screen pt-32 pb-16 px-6 bg-gradient-to-b from-purple-50/50 to-white dark:from-gray-900 dark:to-gray-800">
+    <section id="about" className="lg:min-h-screen md:min-h-[430] pt-32 pb-16 px-6 bg-gradient-to-b from-purple-50/50 to-white dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Section: Text and Buttons */}
@@ -91,7 +91,7 @@ export const Hero = () => {
               href={resume}
               download="Debika_Basu_Resume.pdf"
               whileHover={{ scale: 1.05 }}
-              className="flex block lg:hidden items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-500 dark:to-pink-500 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-shadow w-2/3 max-w-xs mx-auto"
+              className="flex block lg:hidden md:hidden items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-500 dark:to-pink-500 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-shadow w-2/3 max-w-xs mx-auto"
             >
               <FileDown size={16} />
               <span className="text-sm sm:text-base">Download My Resume </span>

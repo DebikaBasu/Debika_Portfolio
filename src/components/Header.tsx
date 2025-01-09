@@ -26,11 +26,14 @@ export const Header = () => {
             className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
-            <span className="hidden sm:block">Debika Basu</span>
+            {/* Show the name only on larger screens */}
+            <span className="hidden lg:block">Debika Basu</span>
+
+            {/* Show the logo on smaller screens (phones and tablets) */}
             <img
               src={logo}
               alt="Logo"
-              className="sm:hidden w-[45px] h-auto"
+              className="block lg:hidden w-[45px] h-auto"
             />
           </motion.div>
 
