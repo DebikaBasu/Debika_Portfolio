@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, FileDown } from 'lucide-react';
 import { ThemeToggle } from './ui/ThemeToggle';
 import resume from '../public/Debika_Basu.pdf';
+import logo from '../public/Up-pic.png';
 
 export const Header = () => {
   const handleScroll = (id) => {
@@ -12,7 +13,7 @@ export const Header = () => {
   };
 
   return (
-    <motion.header 
+    <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -20,12 +21,20 @@ export const Header = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <motion.h1 
+          {/* Header Name / Logo */}
+          <motion.div
             className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
-            Debika Basu
-          </motion.h1>
+            <span className="hidden sm:block">Debika Basu</span>
+            <img
+              src={logo}
+              alt="Logo"
+              className="sm:hidden w-[45px] h-auto"
+            />
+          </motion.div>
+
+          {/* Navigation Menu */}
           <nav className="hidden md:flex items-center gap-6">
             <button
               onClick={() => handleScroll('#about')}
@@ -52,6 +61,8 @@ export const Header = () => {
               Contact
             </button>
           </nav>
+
+          {/* Social Links and Resume */}
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <motion.a
@@ -73,13 +84,13 @@ export const Header = () => {
               <Linkedin size={20} />
             </motion.a>
             <motion.a
-              href={resume} 
-              download="Debika_Basu_Resume.pdf" 
+              href={resume}
+              download="Debika_Basu_Resume.pdf"
               whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-500 dark:to-pink-500 text-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow"
+              className="flex hidden sm:flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-500 dark:to-pink-500 text-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow"
             >
-              <FileDown size={16} />
-              Resume
+              <FileDown size={16} className="mr-1" />
+              <span>Resume</span>
             </motion.a>
           </div>
         </div>

@@ -1,8 +1,9 @@
-// import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { AnimatedText } from './AnimatedText';
 import { TechStack } from './TechStack';
+import { FileDown } from 'lucide-react';
+import resume from '../../public/Debika_Basu.pdf';
 import picofme from '../../public/Up-pic.png';
 
 export const Hero = () => {
@@ -58,12 +59,13 @@ export const Hero = () => {
           </motion.div>
 
           {/* Right Section: Image */}
+
           <div className="relative">
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="relative z-10"
+              className="relative z-10 hidden lg:block"
             >
               <div className="relative">
                 <motion.div
@@ -81,11 +83,22 @@ export const Hero = () => {
                 <img
                   src={picofme}
                   alt="Debika Basu"
-                  className="rounded-full relative z-10 w-full max-w-md mx-auto shadow-2xl mt-[-128px]"
+                  className="rounded-full relative z-10 w-full max-w-md mx-auto shadow-2xl mt-[-128px] sm:hidden lg:block"
                 />
               </div>
             </motion.div>
+            <motion.a
+              href={resume}
+              download="Debika_Basu_Resume.pdf"
+              whileHover={{ scale: 1.05 }}
+              className="flex block lg:hidden items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-500 dark:to-pink-500 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-shadow w-2/3 max-w-xs mx-auto"
+            >
+              <FileDown size={16} />
+              <span className="text-sm sm:text-base">Download My Resume </span>
+            </motion.a>
+
           </div>
+
         </div>
       </div>
     </section>

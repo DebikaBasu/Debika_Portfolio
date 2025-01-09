@@ -5,8 +5,9 @@ import picofme from '../../public/Up-pic.png';
 export const Hero = () => {
   return (
     <section id="about" className="min-h-screen pt-24 pb-16 px-6 bg-gradient-to-b from-purple-50 to-white">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-        <motion.div 
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between lg:gap-12 gap-16">
+        {/* Text Section */}
+        <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -35,17 +36,18 @@ export const Hero = () => {
             </motion.button>
           </div>
         </motion.div>
-        <motion.div 
+
+        {/* Image Section */}
+        <motion.div
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="flex-1"
+          className="flex-1" // Hide on small screens, show on large screens
         >
-          <img 
-            // src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" 
+          <img
             src={picofme}
             alt="Debika Basu"
-            className="rounded-full rounded-full w-96 h-96 object-cover mx-auto shadow-2xl"
+            className="rounded-full w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto object-cover mx-auto shadow-2xl mb-8 lg:mb-0"
           />
         </motion.div>
       </div>
