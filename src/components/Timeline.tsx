@@ -57,7 +57,7 @@ export const Timeline = () => {
             <motion.div
               key={index}
               initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
-              initial={{ x: -100, opacity: 0 }}
+              // initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
