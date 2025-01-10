@@ -88,6 +88,7 @@ export const Hero = () => {
               </div>
             </motion.div>
             <motion.a
+              id='resume-download'
               href={resume}
               download="Debika_Basu_Resume.pdf"
               whileHover={{ scale: 1.05 }}
