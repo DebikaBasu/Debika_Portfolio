@@ -55,7 +55,7 @@ const projects = [
     image: freecode, 
     tech: ["React", "JavaScript", "Material-UI"],
     github: "https://github.com/DebikaBasu/FreeCodeCamp",
-    live: "https://freecodecamp-clone.onrender.com/",
+    live: "https://free-code-camp-clone-xi.vercel.app",
   }
 ];
 
