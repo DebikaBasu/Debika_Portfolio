@@ -1,31 +1,27 @@
-import { Header } from './components/Header';
-import { Hero } from './components/hero/Hero';
-import { Timeline } from './components/Timeline';
-import { Projects } from './components/Projects';
-import { Contact } from './components/Contact';
-import { useTheme } from './hooks/useTheme';
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 
-function App() {
-  useTheme(); // Initialize theme
+const queryClient = new QueryClient();
 
-  const currentYear = new Date().getFullYear(); // Get the current year
-
-  return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      <Header />
-      <main>
-        <Hero />
-        <Timeline />
-        <Projects />
-        <Contact />
-      </main>
-      <footer className="bg-purple-900 dark:bg-gray-800 text-white py-6">
-        <div className="container mx-auto px-6 text-center">
-          <p>© {currentYear} Debika Basu. All Rights Reserved.</p>
-        </div>
-      </footer>
-    </div>
-  );
-}
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
