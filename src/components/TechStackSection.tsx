@@ -14,6 +14,8 @@ import {
   // SiMicrostrategy,
 } from "react-icons/si";
 import { motion } from "framer-motion";
+import hibernateLogo from "../icons/hibernate.png";
+import ddb from "../icons/ddb.png";
 
 // Floating animation variants
 const floatingVariants = (duration: number) => ({
@@ -64,7 +66,7 @@ const TechStackSection = () => {
       name: "DynamoDB",
       icon: (
         <img
-          src="\src\icons\ddb.png"
+          src={ddb}
           alt="DynamoDB"
           className="w-16 h-16 object-contain"
         />
@@ -87,8 +89,8 @@ const TechStackSection = () => {
     {
       name: "Hibernate",
       icon: (
-        <img
-          src="\src\icons\hibernate.png"
+       <img
+          src={hibernateLogo}
           alt="Hibernate"
           className="w-12 h-12 object-contain"
         />
