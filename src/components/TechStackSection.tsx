@@ -11,11 +11,13 @@ import {
   SiMysql,
   SiApachekafka,
   SiGithubactions,
-  // SiMicrostrategy,
 } from "react-icons/si";
 import { motion } from "framer-motion";
+
+// Import all images
 import hibernateLogo from "../icons/hibernate.png";
-import ddb from "../icons/ddb.png";
+import ddbLogo from "../icons/ddb.png";
+import microservicesLogo from "../icons/microservices.png";
 
 // Floating animation variants
 const floatingVariants = (duration: number) => ({
@@ -66,7 +68,7 @@ const TechStackSection = () => {
       name: "DynamoDB",
       icon: (
         <img
-          src={ddb}
+          src={ddbLogo}
           alt="DynamoDB"
           className="w-16 h-16 object-contain"
         />
@@ -89,7 +91,7 @@ const TechStackSection = () => {
     {
       name: "Hibernate",
       icon: (
-       <img
+        <img
           src={hibernateLogo}
           alt="Hibernate"
           className="w-12 h-12 object-contain"
@@ -114,8 +116,8 @@ const TechStackSection = () => {
       name: "Microservices",
       icon: (
         <img
-          src="\src\icons\microservices.png"
-          alt="Hibernate"
+          src={microservicesLogo}
+          alt="Microservices"
           className="w-16 h-16 object-contain"
         />
       ),
@@ -138,14 +140,13 @@ const TechStackSection = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {technologies.map((tech, index) => (
+          {technologies.map((tech) => (
             <Card
               key={tech.name}
               className="tech-icon p-6 text-center cursor-pointer group transition-transform hover:scale-105"
             >
               <CardContent className="p-0 flex flex-col items-center justify-center space-y-3">
                 <motion.div
-                  // variants={floatingVariants(tech.delay ?? 3)}
                   initial="initial"
                   animate="animate"
                   className="transition-transform duration-300 group-hover:scale-110"
