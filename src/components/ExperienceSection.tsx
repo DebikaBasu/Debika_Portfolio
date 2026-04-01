@@ -23,7 +23,7 @@ const ExperienceSection = () => {
     },
     {
       company: "Agnik International Pvt Ltd.",
-      role: "Junior Software Developer",
+      role: "Software Developer",
       duration: "March 2024 - December 2024",
       location: "Kolkata, India",
       type: "Full-time",
@@ -36,7 +36,7 @@ const ExperienceSection = () => {
         "‣ Implemented unit and integration tests achieving 85% code coverage"
       ],
 
-      technologies: ["Dot Net", "OOps", "MySQL", "Git"]
+      technologies: ["Java", "SpringBoot", "OOps", "React", "MySQL", "Git"]
     },
     {
       company: "BasketHunt Pvt Ltd.",
