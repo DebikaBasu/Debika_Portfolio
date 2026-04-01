@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -26,60 +27,55 @@ const ContactSection = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+  try {
+    await emailjs.send(
+      "service_ax0knu5",
+      "template_510rm7j",
+      {
+        from_name: formData.name,        
+        to_name: "Debika Basu",           
+        message: `
+          Subject: ${formData.subject}
+          Email: ${formData.email}
 
+          Message:
+          ${formData.message}
+        `,
+        reply_to: formData.email         
+      },
+      "9bLzFb6dQzoQc1QxJ"
+    );
+  
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
 
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  } catch (error) {
+    console.error("EmailJS error:", error);
+    toast({
+      title: "Error",
+      description: "Oops! Something went wrong. Please try again later.",
+      variant: "destructive",
     });
+  } finally {
     setIsSubmitting(false);
-  };
+  }
+};
 
   const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "debika.connect@gmail.com",
-      href: "mailto:debika.connect@gmail.com"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 62910 43389",
-      href: "tel:+919876543210"
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Kolkata, India",
-      href: null
-    }
+    { icon: Mail, label: "Email", value: "debika.connect@gmail.com", href: "mailto:debika.connect@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+91 62910 43389", href: "tel:+919876543210" },
+    { icon: MapPin, label: "Location", value: "Kolkata, India", href: null }
   ];
 
   const socialLinks = [
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com/debikabasu",
-      color: "hover:text-foreground"
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://linkedin.com/in/debikabasu",
-      color: "hover:text-blue-400"
-    }
+    { icon: Github, label: "GitHub", href: "https://github.com/debikabasu", color: "hover:text-foreground" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/debikabasu", color: "hover:text-blue-400" }
   ];
 
   return (
