@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink, Database, Server, Cloud } from "lucide-react";
 import bankingImage from "@/assets/banking-app-project.jpg";
-import ecommerceImage from "@/assets/ecommerce-project.jpg";
+// import ecommerceImage from "@/assets/ecommerce-project.jpg";
+import wallet_service from "@/assets/wallet_service.svg";
 import emsImage from "@/assets/ems.png";
 import HMS from "@/assets/hms.png";
 
@@ -25,26 +26,8 @@ const ProjectsSection = () => {
         "RESTful APIs with OpenAPI documentation"
       ],
       githubUrl: "https://github.com/debikabasu/banking-app-backend",
-      liveUrl: "https://banking-api-demo.com",
-      status: "Production"
-    },
-    {
-      title: "E-KartCom Microservices",
-      description: "Scalable e-commerce platform backend featuring product catalog, inventory management, order processing, and payment integration with modern microservices architecture.",
-      image: ecommerceImage,
-      category: "E-Commerce Platform",
-      technologies: ["SpringBoot", "DynamoDB", "AWS ECS", "SNS", "SQS", "Docker", "GitHub Actions"],
-      highlights: [
-        "Event-driven microservices with eventual consistency",
-        "DynamoDB for high-performance product catalog",
-        "AWS SNS/SQS for asynchronous order processing",
-        "ECS-based containerized deployment",
-        "CQRS pattern for read/write optimization",
-        "Circuit breaker pattern for resilience"
-      ],
-      githubUrl: "https://github.com/debikabasu/e-kartcom-backend",
-      liveUrl: "https://ekart-api-demo.com",
-      status: "Production"
+      liveUrl: null,
+      // status: "Production"
     },
     {
       "title": "Employee Attendance Leave Management System",
@@ -62,7 +45,7 @@ const ProjectsSection = () => {
       ],
       "githubUrl": "https://github.com/DebikaBasu/employee-attendance-leave-management",
       "liveUrl": null,
-      "status": "Completed"
+      // "status": "Completed"
     },
     {
       "title": "Hospital Management Service",
@@ -81,8 +64,46 @@ const ProjectsSection = () => {
       ],
       "githubUrl": "https://github.com/DebikaBasu/Hospital-Management-Service",
       "liveUrl": null,
-      "status": "Completed"
+      // "status": "Completed"
+    },
+    // {
+    //   title: "E-KartCom Microservices",
+    //   description: "Scalable e-commerce platform backend featuring product catalog, inventory management, order processing, and payment integration with modern microservices architecture.",
+    //   image: ecommerceImage,
+    //   category: "E-Commerce Platform",
+    //   technologies: ["SpringBoot", "DynamoDB", "AWS ECS", "SNS", "SQS", "Docker", "GitHub Actions"],
+    //   highlights: [
+    //     "Event-driven microservices with eventual consistency",
+    //     "DynamoDB for high-performance product catalog",
+    //     "AWS SNS/SQS for asynchronous order processing",
+    //     "ECS-based containerized deployment",
+    //     "CQRS pattern for read/write optimization",
+    //     "Circuit breaker pattern for resilience"
+    //   ],
+    //   githubUrl: "https://github.com/debikabasu/e-kartcom-backend",
+    //   liveUrl: "https://ekart-api-demo.com",
+    //   status: "Production"
+    // }
+
+    {
+      title: "Wallet Service Microservice",
+      description: "Spring Boot 4 microservice for managing digital wallets in a payments system. Supports user registration, wallet creation, deposits, withdrawals, and peer-to-peer transfers with atomic balance updates and transaction logging.",
+      image: wallet_service,
+      category: "Payments & FinTech",
+      technologies: ["Java 17", "Spring Boot 4", "PostgreSQL", "Docker", "Gradle", "JPA", "JUnit 5", "Testcontainers"],
+      highlights: [
+        "User registration and wallet creation with UUID-based entities",
+        "Deposits, withdrawals, and peer-to-peer transfers with atomic balance updates",
+        "RESTful APIs with OpenAPI/Swagger UI documentation",
+        "100% test coverage target with JaCoCo reporting",
+        "Integration tests using Testcontainers and PostgreSQL",
+        "Static analysis via Checkstyle, PMD, and SpotBugs"
+      ],
+      githubUrl: "https://github.com/DebikaBasu/Digital-Wallet-Service",
+      liveUrl: null,
+      // status: "Production"
     }
+
 
   ];
 
