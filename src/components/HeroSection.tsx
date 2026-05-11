@@ -107,7 +107,7 @@ const HeroSection = () => {
             </a>
 
             <a
-              href="mailto:debika.basu@email.com"
+              href="mailto:debika.connect@gmail.com"
               className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110"
             >
               <Mail className="h-6 w-6" />
